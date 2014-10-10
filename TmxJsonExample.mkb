@@ -1,0 +1,46 @@
+#!/usr/bin/env mkb
+
+includepaths
+{
+    ./Libs/cJSON
+    ./Libs/TmxParser
+}
+
+files
+{
+	main.cpp
+
+	(Libs/cJSON)
+	[cJSON]
+	cJSON.c
+	cJSON.h
+
+	(Libs/TmxParser)
+	[TmxParser]
+	TmxRenderer.cpp
+	TmxRenderer.h
+	TmxJsonParser.cpp
+	TmxJsonParser.h
+}
+
+subprojects
+{
+    iwutil
+    iwgx
+	iw2d
+}
+
+assets
+{
+    (data)
+	target.png
+
+	testLevel.json
+	tilemap1.png
+	tilemap2.png
+
+}
+
+deployment
+{
+}
